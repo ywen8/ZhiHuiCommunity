@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="wathet">#95C7F7</color>
+    <color name="dialog_text_color">#C7C7CD</color>
+    <color name="dialog_text_press">#2193F5</color>
+    <color name="black">#000000</color>
+    <color name="dialog_view">#C7C7CD</color>
+    <color name="exit_login">#F95355</color>
+    <!--字体  -->
+    <color name="text_color">#262626</color>
+    <!--字体二  -->
+    <color name="login_select_no">#8C96A1</color>
+    <!--蓝色背景 -->
+    <color name="title_black">#2993F0</color>
+    <!--背景 -->
+    <color name="view_black">#f9f9f9</color>
+
+    <color name="text_color_gary">#A2AAB3</color>
+    <color name="theme_body">#cc22292c</color>
+    <color name="transparent">#00000000</color>
+    <color name="status_bar">#303135</color>
+
+    <color name="view">#F0F0F0</color>
+
+    <color name="bround_color">#5473B1</color>
+    <color name="bround_y">#FFE2B1</color>
+    <color name="translucent_background">#40000000</color>
+    <color name="home_bg">#F6F6F6</color>
+</resources>

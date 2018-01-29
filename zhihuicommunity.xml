@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zhihuicommunity" default="all">
+  
+  
+  <property file="zhihuicommunity.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.swc"/>
+    <include name="*.apk"/>
+    <include name="*.zip"/>
+    <include name="*.egg"/>
+    <include name="*.ane"/>
+    <include name="*.jar"/>
+    <include name="*.ear"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+      <include name="lib/dt.jar"/>
+      <include name="lib/jconsole.jar"/>
+      <include name="lib/sa-jdi.jar"/>
+      <include name="lib/tools.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.gradle:___local_jars__:/users/yw/androidstudioprojects/zhihuicommunity/app/libs/amap_location_v3.3.0_20170118.jar:unspecified@jar.classpath">
+    <pathelement location="${basedir}/app/libs/AMap_Location_V3.3.0_20170118.jar"/>
+  </path>
+  
+  <path id="library.gradle:___local_jars__:/users/yw/androidstudioprojects/zhihuicommunity/app/libs/amap_search_v5.0.0_20170309.jar:unspecified@jar.classpath">
+    <pathelement location="${basedir}/app/libs/AMap_Search_V5.0.0_20170309.jar"/>
+  </path>
+  
+  <path id="library.gradle:___local_jars__:/users/yw/androidstudioprojects/zhihuicommunity/app/libs/android_map3d_sdk_v5.0.0_20170311.jar:unspecified@jar.classpath">
+    <pathelement location="${basedir}/app/libs/Android_Map3D_SDK_V5.0.0_20170311.jar"/>
+  </path>
+  
+  <path id="library.gradle:___local_jars__:/users/yw/androidstudioprojects/zhihuicommunity/app/libs/jcore-android-1.1.8.jar:unspecified@jar.classpath">
+    <pathelement location="${basedir}/app/libs/jcore-android-1.1.8.jar"/>
+  </path>
+  
+  <path id="library.gradle:___local_jars__:/users/yw/androidstudioprojects/zhihuicommunity/app/libs/jpush-android-3.1.0.jar:unspecified@jar.classpath">
+    <pathelement location="${basedir}/app/libs/jpush-android-3.1.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:___local_jars__:/users/yw/androidstudioprojects/zhihuicommunity/app/libs/photoview.jar:unspecified@jar.classpath">
+    <pathelement location="${basedir}/app/libs/photoView.jar"/>
+  </path>
+  
+  <path id="library.gradle:_cn.bingoogolapple:bga-qrcodecore-1.1.9.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/ae00e53c3361a86da9860e017fd8a0d8b050c08a/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/ae00e53c3361a86da9860e017fd8a0d8b050c08a/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_cn.bingoogolapple:bga-zxing-1.1.9.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/b881479c7f0ee4f3f9480625b381d91a7c941391/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/b881479c7f0ee4f3f9480625b381d91a7c941391/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support.constraint:constraint-layout-1.0.2.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/efc97c642e1857425c4779016b7e73c5ef762385/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/efc97c642e1857425c4779016b7e73c5ef762385/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support.constraint:constraint-layout-solver:1.0.2@jar.classpath">
+    <pathelement location="${basedir}/../../Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support.test.espresso:espresso-core-2.2.2.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/98baf0cd035c8bf8ba8e7bbeb91043cc6f42ba26/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/98baf0cd035c8bf8ba8e7bbeb91043cc6f42ba26/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support.test.espresso:espresso-idling-resource-2.2.2.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/804ad4ea16fe3026978dbf166388952089b34dc5/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/804ad4ea16fe3026978dbf166388952089b34dc5/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support.test:exposed-instrumentation-api-publish-0.5.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/f63f26b7f5b070d5ade6c56ea49bf4e40c23191b/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/f63f26b7f5b070d5ade6c56ea49bf4e40c23191b/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support.test:rules-0.5.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/8d788d4e2062ed4a29b0c522d267a67ad2df36c8/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/8d788d4e2062ed4a29b0c522d267a67ad2df36c8/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support.test:runner-0.5.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/30325bfcc8beb8691488b869b6d88d490826e965/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/30325bfcc8beb8691488b869b6d88d490826e965/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:animated-vector-drawable-24.1.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/2308fc3962c7f2dd33d71fda714f976352b36620/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/2308fc3962c7f2dd33d71fda714f976352b36620/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:animated-vector-drawable-25.4.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/f0bf8fa6c96dd1ef3e00020e17987f5ea249d769/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/f0bf8fa6c96dd1ef3e00020e17987f5ea249d769/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:appcompat-v7-24.1.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/de7bd0d61f23d0314a21d05f262773cbf087886e/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/de7bd0d61f23d0314a21d05f262773cbf087886e/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:appcompat-v7-25.4.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/e2dc031e0e86a055da61b3a0e5ca497b3d310317/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/e2dc031e0e86a055da61b3a0e5ca497b3d310317/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:design-24.1.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/c90af8eec36ec394d5b58b5749d149bd975141e0/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/c90af8eec36ec394d5b58b5749d149bd975141e0/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:recyclerview-v7-24.1.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/9664add4310579f816cef1f4f38151abafe7bcaa/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/9664add4310579f816cef1f4f38151abafe7bcaa/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:recyclerview-v7-25.4.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/060645293dcd01fb3524b58875b0f2522323b77d/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/060645293dcd01fb3524b58875b0f2522323b77d/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:support-annotations:24.1.0@jar.classpath">
+    <pathelement location="${basedir}/../../Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.1.0/support-annotations-24.1.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:support-annotations:25.4.0@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/25.4.0/f6a2fc748ae3769633dea050563e1613e93c135e/support-annotations-25.4.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:support-compat-25.4.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/b70381c4188ecf23d4b864003788685154f894a1/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/b70381c4188ecf23d4b864003788685154f894a1/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:support-core-ui-25.4.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/c7f6fc075f4ef82d196191d3e3c94e168230da4d/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/c7f6fc075f4ef82d196191d3e3c94e168230da4d/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:support-core-utils-25.4.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/579e68751aeca846acdfd3c49aae9f1f897a5b45/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/579e68751aeca846acdfd3c49aae9f1f897a5b45/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:support-fragment-25.4.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/289efa9655239155bc53bdb60d45a532936713ed/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/289efa9655239155bc53bdb60d45a532936713ed/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:support-media-compat-25.4.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/4020e46f25c1283ab812367ea423071e4d2b125e/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/4020e46f25c1283ab812367ea423071e4d2b125e/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:support-v4-24.1.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/f62180a075e947444840408d9c3d9ea72b299c02/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/f62180a075e947444840408d9c3d9ea72b299c02/output/jars/classes.jar"/>
+    <pathelement location="${basedir}/../../.android/build-cache/f62180a075e947444840408d9c3d9ea72b299c02/output/jars/libs/internal_impl-24.1.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:support-v4-25.4.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/bd85daca169f8a8cc29b7c5fe60133a0eb335f2c/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/bd85daca169f8a8cc29b7c5fe60133a0eb335f2c/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:support-vector-drawable-24.1.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/a63ec7d3ff2cd61f1a436d3a41a19ca0d81d2010/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/a63ec7d3ff2cd61f1a436d3a41a19ca0d81d2010/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.android.support:support-vector-drawable-25.4.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/35825b646941f74524fa37d6a72a37bf8ce48715/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/35825b646941f74524fa37d6a72a37bf8ce48715/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.flyco.tablayout:flycotablayout_lib-2.1.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/f95239d9545217bc2b2dd72cee59c79e183d9c16/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/f95239d9545217bc2b2dd72cee59c79e183d9c16/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.github.bumptech.glide:glide:3.7.0@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.github.cymchad:baserecyclerviewadapterhelper-2.9.18.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/d32c849d3444f7c4783772a0e83c9a6cfec77a8d/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/d32c849d3444f7c4783772a0e83c9a6cfec77a8d/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.github.fj917:fjmtsortbutton-v1.1.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/873b10972d11e8152b1aab9c01476aef4b765de7/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/873b10972d11e8152b1aab9c01476aef4b765de7/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.code.findbugs:jsr305:2.0.1@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/2.0.1/516c03b21d50a644d538de0f0369c620989cd8f0/jsr305-2.0.1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.code.gson:gson:2.7@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.dagger:dagger:2.8@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger/2.8/55a1aa1cdcfd06b9950ca856e2bc2790e105146a/dagger-2.8.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.zxing:core:3.3.0@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/73c49077166faa4c3c0059c5f583d1d7bd1475fe/core-3.3.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.jakewharton:butterknife-8.4.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/c9439c16fe3e58713ee7752d5bb0a5aa0a3d79c1/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/c9439c16fe3e58713ee7752d5bb0a5aa0a3d79c1/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.jakewharton:butterknife-annotations:8.4.0@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.prolificinteractive:material-calendarview-1.4.3.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/4427092b49866f1d05db34d017c06f1c7f43ae9b/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/4427092b49866f1d05db34d017c06f1c7f43ae9b/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.squareup.haha:haha:2.0.3@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.squareup.haha/haha/2.0.3/640a438d2d415c056ca6a673ac26b183b044e160/haha-2.0.3.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.squareup.leakcanary:leakcanary-analyzer:1.5.1@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-analyzer/1.5.1/77e5213b6ac5b323616a7bd283763bd60c0b3f6f/leakcanary-analyzer-1.5.1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.squareup.leakcanary:leakcanary-android-1.5.1.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/e95f2d295508d72add5ec59a40f5b9dfd2a1f96d/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/e95f2d295508d72add5ec59a40f5b9dfd2a1f96d/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.squareup.leakcanary:leakcanary-android-no-op-1.5.1.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/b5e6e7d4e4a75432d126d38092999ea93c44fcd8/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/b5e6e7d4e4a75432d126d38092999ea93c44fcd8/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.squareup.leakcanary:leakcanary-watcher:1.5.1@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-watcher/1.5.1/3d719b7e20a11415d409e6c29a34a643c560fc6f/leakcanary-watcher-1.5.1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.squareup.okhttp3:logging-interceptor:3.3.1@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.3.1/99ce730034c6f5aaed710d1e0e9df95e8714ed5f/logging-interceptor-3.3.1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.squareup.okhttp3:okhttp:3.3.1@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.1/19047bdb6a4fc00a44124f64ca98e88fc204e7e3/okhttp-3.3.1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.squareup.okio:okio:1.8.0@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.squareup.retrofit2:adapter-rxjava:2.1.0@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.1.0/693eddc23e87ab13f9cf5001707ce8e7e1d1ff01/adapter-rxjava-2.1.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.squareup.retrofit2:converter-gson:2.1.0@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.squareup.retrofit2:retrofit:2.1.0@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.squareup:javawriter:2.1.1@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.1.1/67ff45d9ae02e583d0f9b3432a5ebbe05c30c966/javawriter-2.1.1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.reactivex:rxandroid-1.2.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/6a810086ebbb7da002be84d46416e0a65f3a7b45/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/6a810086ebbb7da002be84d46416e0a65f3a7b45/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.reactivex:rxjava:1.1.5@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.5/ece7b5d0870e66d8226dab6dcf47a2b12afff061/rxjava-1.1.5.jar"/>
+  </path>
+  
+  <path id="library.gradle:_javax.annotation:javax.annotation-api:1.2@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.2/479c1e06db31c432330183f5cae684163f186146/javax.annotation-api-1.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_javax.inject:javax.inject:1@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_junit:junit:4.12@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar"/>
+  </path>
+  
+  <path id="library.gradle:_me.yokeyword:fragmentation-0.9.3.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/aa1a7cb467d839b6fc5eb56d5942e5d7781ceb9f/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/aa1a7cb467d839b6fc5eb56d5942e5d7781ceb9f/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.greenrobot:greendao-api:3.2.0@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.greenrobot/greendao-api/3.2.0/c6d610abe1d75d758431c9234917a349abc0a0ac/greendao-api-3.2.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.greenrobot:greendao:3.2.0@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.greenrobot/greendao/3.2.0/e70040568b2929b8e5869ad1ffca8e4386dc53bc/greendao-3.2.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.hamcrest:hamcrest-core:1.3@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.hamcrest:hamcrest-integration:1.3@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-integration/1.3/5de0c73fef18917cd85d0ab70bb23818685e4dfd/hamcrest-integration-1.3.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.hamcrest:hamcrest-library:1.3@jar.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-library/1.3/4785a3c21320980282f9f33d0d1264a69040538f/hamcrest-library-1.3.jar"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <pathelement location="${javac2.home}/javac2.jar"/>
+    <pathelement location="${javac2.home}/jdom.jar"/>
+    <pathelement location="${javac2.home}/asm-all.jar"/>
+    <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  <import file="${basedir}/switchdatetime/module_switchdatetime.xml"/>
+  
+  <import file="${basedir}/module_zhihuicommunity.xml"/>
+  
+  <import file="${basedir}/app/module_app.xml"/>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.switchdatetime, clean.module.zhihuicommunity, clean.module.app" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.switchdatetime, compile.module.zhihuicommunity, compile.module.app" description="build all modules"/>
+  
+  <target name="all" depends="build.modules" description="build all"/>
+</project>

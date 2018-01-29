@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rain.zhihui_community">
+
+    <permission
+        android:name="com.rain.zhihui_community.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.rain.zhihui_community.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <permission
+        android:name="com.rain.zhihui_community.permission.REMOTE_SERVICE_PERMISSION"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="com.rain.zhihui_community.permission.REMOTE_SERVICE_PERMISSION" />
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- since 3.0.9 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.rain.zhihui_community.DataProvider"
+            android:exported="true" />
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.rain.zhihui_community" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+
+                <category android:name="com.rain.zhihui_community" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.rain.zhihui_community" />
+            </intent-filter>
+        </activity>
+        <!-- SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.rain.zhihui_community" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Required SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="02d3a0eb77860fcdc37221a451718eac" />
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.activity.login.LoginActivity" />
+        <activity android:name=".ui.activity.forget.ForgetPasswordActivity" />
+        <activity android:name=".ui.activity.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.AboutActivity" />
+        <activity android:name=".ui.activity.house.HouseActivity" />
+        <activity android:name=".ui.activity.village.HousingActivity" />
+        <activity android:name=".ui.activity.village.addhousing.AddHousingActivity" />
+        <activity android:name=".ui.activity.community.CommunityActivity" />
+        <activity android:name=".ui.activity.edit.EditTextActivity" />
+        <activity android:name=".ui.activity.information.InformationActivity" />
+        <activity android:name=".ui.activity.information.SexActivity" />
+        <activity android:name=".imagepicker.ui.ImageBaseActivity" />
+        <activity android:name=".imagepicker.ui.ImageCropActivity" />
+        <activity android:name=".imagepicker.ui.ImageGridActivity" />
+        <activity android:name=".imagepicker.ui.ImagePreviewActivity" />
+        <activity android:name=".imagepicker.ui.ImagePreviewBaseActivity" />
+        <activity android:name=".imagepicker.ui.ImagePreviewDelActivity" />
+        <activity android:name=".ui.activity.settting.SettingActivity" />
+        <activity android:name=".ui.activity.settting.PasswordActivity" />
+        <activity android:name=".ui.activity.ImagePagerActivity" />
+        <activity android:name=".ui.activity.appointment.AppointmentDoorActivity" />
+        <activity android:name=".ui.activity.appointment.SubscribePersonActivity" />
+        <activity android:name=".ui.activity.ReportPoliceActivity" />
+        <activity android:name=".ui.activity.lethouse.LetHouseActivity" />
+        <activity android:name=".ui.activity.lethouse.issue.IssueHouseActivity" />
+        <activity android:name=".ui.activity.message.MessageActivity" />
+        <activity
+            android:name=".ui.activity.group_chat.GroupChatActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.activity.life.TenementActivity" />
+        <activity android:name=".ui.activity.government.SecurityActivity" />
+        <activity android:name=".ui.activity.life.RepairsActivity" />
+        <activity android:name=".ui.activity.tenement.CommunityServiceActivity" />
+        <activity android:name=".ui.activity.traffic.TrafficActivity" />
+        <activity android:name=".ui.activity.control.FireControlActivity" />
+
+        <service
+            android:name=".services.MessageService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+
+        <activity android:name=".ui.activity.WebActivity" />
+        <activity android:name=".ui.activity.control.ComplaintActivity" />
+        <activity android:name=".ui.activity.control.CommunityControlActivity" />
+        <activity android:name=".ui.activity.control.TipsActivity" />
+        <activity android:name=".ui.activity.control.ControlBuildActivity" />
+        <activity android:name=".ui.activity.control.ControlPersonActivity" />
+        <activity android:name=".ui.activity.government.ExitTransactActivity" />
+        <activity android:name=".ui.activity.government.SubscribeCertificateActivity" />
+        <activity android:name=".ui.activity.government.CertificateNoticeActivity" />
+        <activity android:name=".ui.activity.government.BusinessCancelActivity" />
+        <activity android:name=".ui.activity.government.CertificatePlanActivity" />
+        <activity android:name=".ui.activity.government.CertificateWinActivity" />
+        <activity android:name=".ui.activity.government.CertificateKnowActivity" />
+        <activity android:name=".ui.activity.government.OfferRewardActivity" />
+        <activity android:name=".ui.activity.government.CardIDActivity" />
+        <activity android:name=".ui.activity.government.GovernmentComplaintActivity" />
+        <activity android:name=".ui.activity.control.CommunityBasicsActivity" />
+        <activity android:name=".ui.activity.traffic.TrafficDispostActivity" />
+        <activity android:name=".ui.activity.traffic.TrafficViolateActivity" />
+        <activity android:name=".ui.activity.traffic.TrafficInfromActivity" />
+        <activity android:name=".ui.activity.traffic.TrafficMotorVehiclesActivity" />
+        <activity android:name=".ui.activity.traffic.TrafficCompensateActivity" />
+        <activity android:name=".ui.activity.traffic.TrafficHelpActivity" />
+        <activity android:name=".ui.activity.control.TowerActivity" />
+        <activity android:name=".ui.activity.GuidanceActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.rain.zhihui_community.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity android:name=".ui.activity.control.WisdomControlActivity" />
+        <activity android:name=".ui.activity.control.MyDeviceActivity" />
+        <activity android:name=".ui.activity.control.ControlMessageActivity" />
+        <activity android:name=".ui.activity.ScanCodeActivity" />
+
+        <receiver
+            android:name=".services.MessageReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.rain.zhihui_community" />
+            </intent-filter>
+        </receiver>
+        <!-- Required. For publish channel feature -->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。 -->
+        <!-- 例如: -->
+        <!-- 发到 Google Play 的APK可以设置为 google-play; -->
+        <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <!-- Required. AppKey copied from Portal -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="196176ebf13ca484b06b87e6" />
+
+        <activity
+            android:name=".ui.activity.DialogActivity"
+            android:theme="@style/translucent" />
+        <activity
+            android:name=".ui.activity.wallet.RedPacketActivity"
+            android:theme="@style/myDialogTheme" />
+        <activity android:name=".ui.activity.wallet.WalletActivity" />
+        <activity android:name=".ui.activity.wallet.DepositActivity"></activity>
+    </application>
+
+</manifest>

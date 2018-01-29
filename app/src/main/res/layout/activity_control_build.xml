@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_black"
+    android:orientation="vertical"
+    tools:context="com.rain.zhihui_community.ui.activity.control.ControlBuildActivity">
+
+    <include
+        layout="@layout/title_item_text_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_build"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="15dp"/>
+
+            <TextView
+                android:id="@+id/tv_build_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="8dp"
+                android:padding="15dp"
+                android:text="      盛世华府小区现有住宅建筑十一栋，其中一类高层住宅建筑三栋，二类高层住宅建筑八栋。于2015年4月投入使用。其中9、10、11号楼1、2层带有商业服务型网点，目前入驻商铺8家。小区现有建筑消防设施：室内消火栓系统、火灾自动报警系统、防、排烟系统、地下1至2层设有自动喷水灭火系统，气体灭火系统。小区消防控制室位于小区1号楼3单元负1层。"
+                android:textColor="@color/text_color"
+                android:textSize="19sp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

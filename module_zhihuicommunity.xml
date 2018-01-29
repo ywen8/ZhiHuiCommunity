@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_zhihuicommunity" default="compile.module.zhihuicommunity">
+  <dirname property="module.zhihuicommunity.basedir" file="${ant.file.module_zhihuicommunity}"/>
+  
+  <property name="module.jdk.home.zhihuicommunity" value="${jdk.home.1.8}"/>
+  <property name="module.jdk.bin.zhihuicommunity" value="${jdk.bin.1.8}"/>
+  <property name="module.jdk.classpath.zhihuicommunity" value="jdk.classpath.1.8"/>
+  
+  <property name="compiler.args.zhihuicommunity" value="-encoding UTF-8 -source 1.7 -target 1.7 ${compiler.args}"/>
+  
+  <property name="zhihuicommunity.output.dir" value="${module.zhihuicommunity.basedir}/build/classes/production/ZhiHuiCommunity"/>
+  <property name="zhihuicommunity.testoutput.dir" value="${module.zhihuicommunity.basedir}/build/classes/test/ZhiHuiCommunity"/>
+  
+  <path id="zhihuicommunity.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="zhihuicommunity.module.production.classpath">
+    <path refid="${module.jdk.classpath.zhihuicommunity}"/>
+  </path>
+  
+  <path id="zhihuicommunity.runtime.production.module.classpath">
+    <pathelement location="${zhihuicommunity.output.dir}"/>
+  </path>
+  
+  <path id="zhihuicommunity.module.classpath">
+    <path refid="${module.jdk.classpath.zhihuicommunity}"/>
+    <pathelement location="${zhihuicommunity.output.dir}"/>
+  </path>
+  
+  <path id="zhihuicommunity.runtime.module.classpath">
+    <pathelement location="${zhihuicommunity.testoutput.dir}"/>
+    <pathelement location="${zhihuicommunity.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.zhihuicommunity">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.zhihuicommunity">
+    <patternset refid="excluded.from.module.zhihuicommunity"/>
+  </patternset>
+  
+  
+  <target name="compile.module.zhihuicommunity" depends="compile.module.zhihuicommunity.production,compile.module.zhihuicommunity.tests" description="Compile module ZhiHuiCommunity"/>
+  
+  <target name="compile.module.zhihuicommunity.production" depends="register.custom.compilers" description="Compile module ZhiHuiCommunity; production classes"/>
+  
+  <target name="compile.module.zhihuicommunity.tests" depends="register.custom.compilers,compile.module.zhihuicommunity.production" description="compile module ZhiHuiCommunity; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.zhihuicommunity" description="cleanup module">
+    <delete dir="${zhihuicommunity.output.dir}"/>
+    <delete dir="${zhihuicommunity.testoutput.dir}"/>
+  </target>
+</project>

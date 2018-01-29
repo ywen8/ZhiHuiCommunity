@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/view_black"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/item_layout_backgroud"
+        android:padding="@dimen/dp15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp05"
+                android:text="不忘初心，继续前进"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp19"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_title_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp05"
+                android:layout_marginTop="@dimen/dp05"
+                android:text="2017-10-22"
+                android:textColor="@color/login_select_no"
+                android:textSize="@dimen/sp12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0.5"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/view" />
+
+            <TextView
+                android:id="@+id/tv_title_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp05"
+                android:layout_marginTop="@dimen/dp10"
+                android:lineSpacingExtra="@dimen/dp08"
+                android:text="新华社北京10月24日电 中国共产党第十九次全国代表大会在选举产生新一届中央委员会和中央纪律检查委员会，通过关于十八届中央委员会报告的决议、关于十八届中央纪律检查委员会工作报告的决议、关于《中国共产党章程（修正案）》的决议后，24日上午在人民大会堂胜利闭幕。"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp18" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

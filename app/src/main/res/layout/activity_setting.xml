@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/view_black"
+              android:orientation="vertical"
+              tools:context="com.rain.zhihui_community.ui.activity.settting.SettingActivity">
+
+    <include layout="@layout/title_item_layout"/>
+
+    <LinearLayout
+        android:id="@+id/ll_setting_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/setting_password"
+            android:textColor="@color/text_color"
+            android:textSize="19sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/right"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_exit_login"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:text="退出登录"
+        android:textColor="@color/exit_login"
+        android:textSize="16sp"/>
+</LinearLayout>

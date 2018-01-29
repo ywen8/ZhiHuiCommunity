@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_black"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout_home" />
+
+    <ListView
+        android:id="@+id/lv_neighbor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/view_black"
+        android:divider="@color/view"
+        android:dividerHeight="@dimen/dp0.5"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        android:visibility="gone"></ListView>
+
+    <RelativeLayout
+        android:id="@+id/rl_none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp90"
+            android:src="@drawable/no_message" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无群组 , "
+                android:textColor="@color/login_select_no"
+                android:textSize="@dimen/sp18" />
+
+            <TextView
+                android:id="@+id/tv_add_housing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="去添加小区..."
+                android:textColor="@color/title_black"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

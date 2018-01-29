@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">智慧平安社区</string>
+
+    <string name="mobile_code">请输入手机号码</string>
+    <string name="mobile_pwd">请输入6位以上密码</string>
+    <string name="login_pwd">忘记密码?</string>
+    <string name="register_gain_code">获取验证码</string>
+    <string name="register_code">请输入验证码</string>
+    <string name="my_name_string">智慧平安社区</string>
+    <string name="my_housing_estate">我的社区</string>
+    <string name="my_house">房源管理</string>
+    <string name="my_about">关于我们</string>
+    <string name="btn_comple">完成</string>
+    <string name="my_housing_select">选择小区</string>
+    <string name="my_housing_unit">单元号</string>
+    <string name="my_room_number">房间号</string>
+    <string name="my_room_number_et">请输入房间号</string>
+    <string name="my_name_room">姓名</string>
+    <string name="my_room_name">请输入姓名</string>
+    <string name="my_phone_room">手机号</string>
+    <string name="activity_housing_select">请先选择小区</string>
+    <string name="housing_select">选择小区</string>
+    <string name="housing_unit_num">选择单元号</string>
+    <string name="activity_room_number">请先选择单元号</string>
+    <string name="edittext_room_number">请输入房间号</string>
+    <string name="my_room_phone">请输入手机号</string>
+    <string name="my_information_photo">头像</string>
+    <string name="my_information_sex">性别</string>
+    <string name="information_title">个人资料</string>
+    <string name="my_idcard_number">身份证号</string>
+    <string name="my_room_idcard">请输入身份证号</string>
+    <string name="my_onwername_room">业主姓名</string>
+    <string name="my_room_onwername">请输入业主姓名</string>
+    <string name="my_onwerphone_room">业主电话</string>
+    <string name="my_room_onwerphone">请输入业主手机号</string>
+
+    <!-- imagePicker -->
+    <string name="all_images">全部图片</string>
+    <string name="complete">完成</string>
+    <string name="folder_image_count">共%1$d张</string>
+    <string name="origin">原图</string>
+    <string name="origin_size">原图(%1$s)</string>
+    <string name="photo_crop">图片裁剪</string>
+    <string name="preview_count">预览(%1$s)</string>
+    <string name="preview_image_count">%1$s/%2$s</string>
+    <string name="select_complete">完成(%1$s/%2$s)</string>
+    <string name="select_limit">最多选择%1$s张图片</string>
+    <string name="my_setting">设置</string>
+    <string name="setting_password">修改密码</string>
+    <string name="worn_setting_password">旧密码</string>
+    <string name="new_password">新密码</string>
+    <string name="complete_password">确认密码</string>
+    <string name="edit_worn_password">请输旧密码</string>
+    <string name="edit_new_password">请输入新密码</string>
+    <string name="complete_new_password">确认新密码</string>
+    <string name="home_text_government">政务服务</string>
+    <string name="home_text_life">生活服务</string>
+    <string name="home_layout_zing">扫描二维码开门</string>
+    <string name="zxing_text">请把二维码放在设备前扫描</string>
+    <string name="select_time">访问时间</string>
+    <string name="clean">Clean</string>
+    <string name="sub_time">请先选择时间</string>
+    <string name="notifyTitle">提示</string>
+    <string name="notifyMsg">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="setting">设置</string>
+    <string name="cancel">取消</string>
+    <string name="issue_house_hint">请输入房源介绍...</string>
+    <string name="cer_sub_notice">1、每个预约号只能一个人使用；\n2、用预约号办理业务时必须出示身份证明原件； \n3、每个人智能预约一个时间，多次预约将视为恶意预约，取消预约资格；\n4、一个预约号可以办理该预约人的多项业务；</string>
+    <string name="traffic_plan">用户实名认证后，即可使用交通违法处理业务。 注意事项 \n1.本平台可处理陕A牌照小型汽车的非现场交通违法； \n2.车主用户通过实名认证后，可在本平台处理罚款金额≦200元且记分≦6分的交通违法； \n3.非车主用户通过实名认证后，可在本平台处理罚款金额≦200元且不记分的交通违法； \n4.驾驶证当前累计记分加上所选处理违法的记分不超过11分； \n5.违法处理成功，您将收到西安交警官方微信消息；支付后未处理成功的订单系统会自动退款； \n6.如果您已通过其他渠道对机动车违法进行裁决，违法列表里将不显示该笔违法，请通过驾驶人违法缴费查询功能进行查询和缴费； \n7.由于网络数据传输延迟，处理完违法后驾驶证和机动车状态可能未实时变更，暂时需手动刷新； \n8.使用此功能视为同意接受此交通违法处罚，对处罚记分和金额没有异议。如果您对违法事实有异议，请前往违法发生地公安机关交通管理部门办理。当事人享有虽处罚结果申诉、复议等权利。 \n9.为了给您提供更好的服务，我们欢迎各位积极反馈您的建议。 \n10.如您支付成功后15分钟内未收到系统反馈消息，或者遇网络异常等特殊情况请联系电话86755359（工作日09:00-17:00）。</string>
+    <string name="activity_about">\t\t\t智慧社区综合管理系统是在国家建设智慧城市、平安城市、智慧社区、平安社区的大背景下，响应国家政策营运而生的一个集合物联网技术和互联网技术的社区立体化治安防控平台。\n\t\t智慧社区APP是属于智慧社区综合管理系统的软件部分。智慧社区APP不仅能够实现手机一键开门、预约开门、一键报警的主要功能；也能实现公安户籍查询、出入境办理和交警车辆违章查询、缴费等的政务功能；还能实现物业缴费、开换锁、上门保洁等综合服务。是一款集移动政务和社区综合服务的全能APP。安全高效地为居民解决最后一公里问题。</string>
+    <string name="app_updata">应用更新</string>
+    <string name="bround_text">给你发一个红包</string>
+    <string name="my_bround">我的钱包</string>
+    <string name="renter">我是业主</string>
+    <string name="owner">我是租客</string>
+
+</resources>

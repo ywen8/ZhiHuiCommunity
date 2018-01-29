@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressPieView">
+        <attr name="android:text"/>
+        <attr name="android:textSize"/>
+        <attr name="android:textColor"/>
+        <attr name="ppvProgress" format="integer"/>
+        <attr name="ppvMax" format="integer"/>
+        <attr name="ppvStartAngle" format="integer"/>
+        <attr name="ppvInverted" format="boolean"/>
+        <attr name="ppvCounterclockwise" format="boolean"/>
+        <attr name="ppvStrokeWidth" format="dimension"/>
+        <attr name="ppvBackgroundColor" format="reference|color"/>
+        <attr name="ppvProgressColor" format="reference|color"/>
+        <attr name="ppvStrokeColor" format="reference|color"/>
+        <attr name="ppvShowStroke" format="boolean"/>
+        <attr name="ppvShowText" format="boolean"/>
+        <attr name="ppvTypeface" format="string"/>
+        <attr name="ppvImage" format="reference"/>
+        <attr name="ppvProgressFillType" format="enum">
+            <enum name="radial" value="0"/>
+            <enum name="center" value="1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="GifMoviewView">
+        <attr name="gif" format="reference" />
+        <attr name="paused" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CustomTheme">
+        <attr name="gifMoviewViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <!-- The DatePicker style. -->
+    <attr name="datePickerStyle" format="reference" />
+
+    <declare-styleable name="DatePicker">
+
+        <!--
+             The first year (inclusive), for example "1940".
+             {@deprecated Use minDate instead.}
+        -->
+        <attr name="dp_startYear" format="integer" />
+        <!--
+             The last year (inclusive), for example "2010".
+             {@deprecated Use maxDate instead.}
+        -->
+        <attr name="dp_endYear" format="integer" />
+        <!-- Whether the spinners are shown. -->
+        <attr name="dp_spinnersShown" format="boolean" />
+        <!-- Whether the calendar view is shown. -->
+        <attr name="dp_calendarViewShown" format="boolean" />
+        <!-- The minimal date shown by this calendar view in mm/dd/yyyy format. -->
+        <attr name="dp_minDate" format="string" />
+        <!-- The maximal date shown by this calendar view in mm/dd/yyyy format. -->
+        <attr name="dp_maxDate" format="string" />
+        <!-- @hide The layout of the date picker. -->
+        <attr name="dp_internalLayout" format="reference" />
+    </declare-styleable>
+
+    <!-- The CalendarView style. -->
+    <attr name="calendarViewStyle" format="reference" />
+
+    <declare-styleable name="CalendarView">
+
+        <!-- The first day of week according to {@link java.util.Calendar}. -->
+        <attr name="cv_firstDayOfWeek" format="integer" />
+        <!-- Whether do show week numbers. -->
+        <attr name="cv_showWeekNumber" format="boolean" />
+        <!-- The minimal date shown by this calendar view in mm/dd/yyyy format. -->
+        <attr name="cv_minDate" format="string" />
+        <!-- The minimal date shown by this calendar view in mm/dd/yyyy format. -->
+        <attr name="cv_maxDate" format="string" />
+        <!-- The number of weeks to be shown. -->
+        <attr name="cv_shownWeekCount" format="integer" />
+        <!-- The background color for the selected week. -->
+        <attr name="cv_selectedWeekBackgroundColor" format="color|reference" />
+        <!-- The color for the dates of the focused month. -->
+        <attr name="cv_focusedMonthDateColor" format="color|reference" />
+        <!-- The color for the dates of an unfocused month. -->
+        <attr name="cv_unfocusedMonthDateColor" format="color|reference" />
+        <!-- The color for the week numbers. -->
+        <attr name="cv_weekNumberColor" format="color|reference" />
+        <!-- The color for the separator line between weeks. -->
+        <attr name="cv_weekSeparatorLineColor" format="color|reference" />
+        <!-- Drawable for the vertical bar shown at the beginning and at the end of the selected date. -->
+        <attr name="cv_selectedDateVerticalBar" format="reference" />
+        <!-- The text appearance for the week day abbreviation of the calendar header. -->
+        <attr name="cv_weekDayTextAppearance" format="reference" />
+        <!-- The text appearance for the calendar dates. -->
+        <attr name="cv_dateTextAppearance" format="reference" />
+        <attr name="cv_dividerHorizontal" format="reference" />
+    </declare-styleable>
+
+    <!-- Framework styleables are not public. -->
+    <declare-styleable name="TextAppearanceCompatStyleable">
+        <attr name="android:textSize" />
+    </declare-styleable>
+
+    <!--
+        Copy one of these attributes to your own theme (choose either dark or light).
+        <item name="numberPickerStyle">@style/NPWidget.Holo.NumberPicker</item>
+        <item name="numberPickerStyle">@style/NPWidget.Holo.Light.NumberPicker</item>
+    -->
+
+
+    <!-- Don't touch this -->
+    <attr name="numberPickerStyle" format="reference" />
+
+    <declare-styleable name="NumberPicker">
+
+        <!-- @hide Color for the solid color background if such for optimized rendering. -->
+        <attr name="solidColor" format="color|reference" />
+        <!-- @hide The divider for making the selection area. -->
+        <attr name="selectionDivider" format="reference" />
+        <!-- @hide The height of the selection divider. -->
+        <attr name="selectionDividerHeight" format="dimension" />
+        <!-- @hide The distance between the two selection dividers. -->
+        <attr name="selectionDividersDistance" format="dimension" />
+        <!-- @hide The min height of the NumberPicker. -->
+        <attr name="internalMinHeight" format="dimension" />
+        <!-- @hide The max height of the NumberPicker. -->
+        <attr name="internalMaxHeight" format="dimension" />
+        <!-- @hide The min width of the NumberPicker. -->
+        <attr name="internalMinWidth" format="dimension" />
+        <!-- @hide The max width of the NumberPicker. -->
+        <attr name="internalMaxWidth" format="dimension" />
+        <!-- @hide The layout of the number picker. -->
+        <attr name="internalLayout" format="reference" />
+        <!-- @hide The drawable for pressed virtual (increment/decrement) buttons. -->
+        <attr name="virtualButtonPressedDrawable" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="Lanner">
+        <attr name="delayTime" format="integer"></attr>
+        <attr name="scrollerDuration" format="integer"></attr>
+        <attr name="dotsSelectedIcon" format="reference"></attr>
+        <attr name="dotsUnSelectedIcon" format="reference"></attr>
+    </declare-styleable>
+    <declare-styleable name="BubbleImageView">
+        <attr name="bubble_arrowTop" format="dimension|reference" />
+        <attr name="bubble_arrowWidth" format="dimension|reference" />
+        <attr name="bubble_arrowHeight" format="dimension|reference" />
+        <attr name="bubble_arrowOffset" format="dimension|reference" />
+        <attr name="bubble_angle" format="dimension|reference" />
+        <attr name="bubble_arrowLocation" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="BannerView">
+        <!-- 是否支持循环, 默认 true -->
+        <attr name="bvIsLoop" format="boolean"/>
+        <!-- 是否支持自动滚动, 默认 true -->
+        <attr name="bvIsAuto" format="boolean"/>
+        <!-- 滚动延时, 默认5000ms -->
+        <attr name="bvDelay" format="integer"/>
+        <!-- 滚动间隔, 默认5000ms -->
+        <attr name="bvInterval" format="integer"/>
+        <!-- 高宽比(height/width)-->
+        <attr name="bvAspectRatio" format="float"/>
+
+        <!-- 底部背景条颜色, 默认透明 -->
+        <attr name="bvBarColor" format="color"/>
+        <!-- 底部背景条在滚动到最后一个item时是否可见, 默认 true -->
+        <attr name="bvBarVisibleWhenLast" format="boolean"/>
+
+        <!-- 底部背景条padding, 默认10dp -->
+        <attr name="bvBarPaddingLeft" format="dimension"/>
+        <attr name="bvBarPaddingTop" format="dimension"/>
+        <attr name="bvBarPaddingRight" format="dimension"/>
+        <attr name="bvBarPaddingBottom" format="dimension"/>
+
+        <!-- 标题文字颜色, 默认 #ffffff -->
+        <attr name="bvTitleColor" format="color"/>
+        <!-- 标题文字大小, 默认 14sp -->
+        <attr name="bvTitleSize" format="dimension"/>
+        <!-- 标题是否可见, 默认 false  -->
+        <attr name="bvTitleVisible" format="boolean"/>
+
+
+        <!-- 指示器是否可见, 默认 auto  -->
+        <attr name="bvIndicatorVisible" format="integer">
+            <enum name="auto" value="0"/>
+            <enum name="always" value="1"/>
+            <enum name="never" value="2"/>
+        </attr>
+
+        <!-- 指示器位置, 默认 center-->
+        <attr name="bvIndicatorGravity">
+            <enum name="center" value="17"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+        </attr>
+
+        <!-- 指示器项的 宽度/高度/间距, 默认 6dp -->
+        <attr name="bvIndicatorWidth" format="dimension"/>
+        <attr name="bvIndicatorHeight" format="dimension"/>
+        <attr name="bvIndicatorGap" format="dimension"/>
+
+        <!-- 指示器未选中颜色, 默认 #88ffffff  -->
+        <attr name="bvIndicatorColor" format="color"/>
+        <!-- 指示器选中颜色, 默认 #ffffff -->
+        <attr name="bvIndicatorColorSelected" format="color"/>
+
+        <!-- 指示器未选中drawable资源 -->
+        <attr name="bvIndicatorDrawable" format="reference"/>
+        <!-- 指示器选中drawable资源 -->
+        <attr name="bvIndicatorDrawableSelected" format="reference"/>
+    </declare-styleable>
+    <attr name="srlPrimaryColor" format="color"/><!--主要颜色-->
+    <attr name="srlAccentColor" format="color"/><!--强调颜色-->
+
+    <attr name="srlSpinnerStyle" format="enum">
+        <enum name="Translate" value="0"/><!--平行移动-->
+        <enum name="Scale" value="1"/><!--拉伸形变-->
+        <enum name="FixedFront" value="2"/><!--固定在前面-->
+        <enum name="FixedBehind" value="3"/><!--固定在背后-->
+    </attr>
+
+    <attr name="srlClassicsSpinnerStyle" format="enum">
+        <enum name="Translate" value="0"/><!--平行移动-->
+        <enum name="Scale" value="1"/><!--拉伸形变-->
+        <enum name="FixedBehind" value="3"/><!--固定在背后-->
+    </attr>
+
+    <declare-styleable name="SmartRefreshLayout">
+        <attr name="srlPrimaryColor"/>
+        <attr name="srlAccentColor"/>
+        <attr name="srlReboundDuration" format="integer"/>
+        <attr name="srlHeaderHeight" format="dimension"/>
+        <attr name="srlFooterHeight" format="dimension"/>
+        <attr name="srlDragRate" format="float"/>
+        <attr name="srlHeaderMaxDragRate" format="float"/>
+        <attr name="srlFooterMaxDragRate" format="float"/>
+        <attr name="srlEnableRefresh" format="boolean"/>
+        <attr name="srlEnableLoadmore" format="boolean"/>
+        <attr name="srlEnableHeaderTranslationContent" format="boolean"/>
+        <attr name="srlEnableFooterTranslationContent" format="boolean"/>
+        <attr name="srlEnablePreviewInEditMode" format="boolean"/>
+        <attr name="srlEnableAutoLoadmore" format="boolean"/>
+        <attr name="srlEnableOverScrollBounce" format="boolean"/>
+        <attr name="srlEnablePureScrollMode" format="boolean"/>
+        <attr name="srlEnableNestedScrolling" format="boolean"/>
+        <attr name="srlEnableScrollContentWhenLoaded" format="boolean"/>
+        <attr name="srlDisableContentWhenRefresh" format="boolean"/>
+        <attr name="srlDisableContentWhenLoading" format="boolean"/>
+        <attr name="srlFixedHeaderViewId" format="reference"/>
+        <attr name="srlFixedFooterViewId" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="BezierRadarHeader">
+        <attr name="srlPrimaryColor"/>
+        <attr name="srlAccentColor"/>
+    </declare-styleable>
+
+    <declare-styleable name="BallPulseFooter">
+        <attr name="srlClassicsSpinnerStyle"/>
+        <attr name="srlPrimaryColor"/>
+        <attr name="srlAccentColor"/>
+    </declare-styleable>
+
+    <declare-styleable name="ClassicsHeader">
+        <attr name="srlClassicsSpinnerStyle"/>
+        <attr name="srlPrimaryColor"/>
+        <attr name="srlAccentColor"/>
+    </declare-styleable>
+
+    <declare-styleable name="ClassicsFooter">
+        <attr name="srlClassicsSpinnerStyle"/>
+        <attr name="srlPrimaryColor"/>
+        <attr name="srlAccentColor"/>
+    </declare-styleable>
+    <declare-styleable name="UltraViewPager">
+        <attr name="upv_autoscroll" format="integer" />
+        <attr name="upv_infiniteloop" format="boolean" />
+        <attr name="upv_ratio" format="float" />
+        <attr name="upv_scrollmode" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="upv_disablescroll" format="enum">
+            <enum name="none" value="0" />
+            <enum name="backward" value="1" />
+            <enum name="forward" value="2" />
+        </attr>
+        <attr name="upv_multiscreen" format="boolean" />
+        <attr name="upv_automeasure" format="boolean" />
+        <attr name="upv_itemratio" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="DynamicSoreView">
+        <!--设置选中点-->
+        <attr name="SoreRadioSelect" format="reference" />
+        <!--设置最未选中点-->
+        <attr name="SoreRadioUnselected" format="reference" />
+        <!--设置圆点间距-->
+        <attr name="SoreDistance" format="integer" />
+        <!--设置每页显示几个-->
+        <attr name="SoreNumber" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="SmileyLoadingView">
+        <!-- animation duration -->
+        <attr name="duration" format="integer"/>
+        <!-- stroke width -->
+        <attr name="strokeWidth" format="dimension"/>
+        <!-- stroke color -->
+        <attr name="strokeColor" format="color"/>
+        <!-- animation repeat count -->
+        <attr name="animRepeatCount" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="CircleIndicator">
+        <attr name="ci_width" format="dimension"/>
+        <attr name="ci_height" format="dimension"/>
+        <attr name="ci_margin" format="dimension"/>
+        <attr name="ci_animator" format="reference"/>
+        <attr name="ci_animator_reverse" format="reference"/>
+        <attr name="ci_drawable" format="reference"/>
+        <attr name="ci_drawable_unselected" format="reference"/>
+
+        <attr name="ci_orientation" format="enum">
+            <!-- Defines an horizontal widget. -->
+            <enum name="horizontal" value="0"/>
+            <!-- Defines a vertical widget. -->
+            <enum name="vertical" value="1"/>
+        </attr>
+
+        <attr name="ci_gravity">
+            <!-- Push object to the top of its container, not changing its size. -->
+            <flag name="top" value="0x30"/>
+            <!-- Push object to the bottom of its container, not changing its size. -->
+            <flag name="bottom" value="0x50"/>
+            <!-- Push object to the left of its container, not changing its size. -->
+            <flag name="left" value="0x03"/>
+            <!-- Push object to the right of its container, not changing its size. -->
+            <flag name="right" value="0x05"/>
+            <!-- Place object in the vertical center of its container, not changing its size. -->
+            <flag name="center_vertical" value="0x10"/>
+            <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill_vertical" value="0x70"/>
+            <!-- Place object in the horizontal center of its container, not changing its size. -->
+            <flag name="center_horizontal" value="0x01"/>
+            <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+            <flag name="fill_horizontal" value="0x07"/>
+            <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            <flag name="center" value="0x11"/>
+            <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill" value="0x77"/>
+            <!-- Additional option that can be set to have the top and/or bottom edges of
+            the child clipped to its container's bounds.
+            The clip will be based on the vertical gravity: a top gravity will clip the bottom
+            edge, a bottom gravity will clip the top edge, and neither will clip both edges. -->
+            <flag name="clip_vertical" value="0x80"/>
+            <!-- Additional option that can be set to have the left and/or right edges of
+            the child clipped to its container's bounds.
+            The clip will be based on the horizontal gravity: a left gravity will clip the right
+            edge, a right gravity will clip the left edge, and neither will clip both edges. -->
+            <flag name="clip_horizontal" value="0x08"/>
+            <!-- Push object to the beginning of its container, not changing its size. -->
+            <flag name="start" value="0x00800003"/>
+            <!-- Push object to the end of its container, not changing its size. -->
+            <flag name="end" value="0x00800005"/>
+        </attr>
+
+    </declare-styleable>
+
+
+</resources>

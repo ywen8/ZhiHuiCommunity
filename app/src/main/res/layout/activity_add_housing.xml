@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_black"
+    android:orientation="vertical"
+    tools:context="com.rain.zhihui_community.ui.activity.village.addhousing.AddHousingActivity">
+
+    <include layout="@layout/title_item_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <Button
+                android:id="@+id/bt_renter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@string/renter"
+                android:textColor="@color/title_black"
+                android:textSize="@dimen/sp19" />
+
+            <View
+                android:id="@+id/v_renter"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/button_login_select_press" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <Button
+                android:id="@+id/bt_ower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@string/owner"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp19" />
+
+            <View
+                android:id="@+id/v_ower"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/button_login_select_press"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_houing_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp05"
+                    android:layout_weight="1"
+                    android:text="@string/my_housing_select"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp19" />
+
+                <TextView
+                    android:id="@+id/tv_my_housing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:text="@string/housing_select"
+                    android:textColor="@color/login_select_no"
+                    android:textSize="@dimen/sp19" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_unit_num_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp05"
+                    android:layout_weight="1"
+                    android:text="@string/my_housing_unit"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp19" />
+
+                <TextView
+                    android:id="@+id/tv_unit_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:text="@string/housing_unit_num"
+                    android:textColor="@color/login_select_no"
+                    android:textSize="@dimen/sp19" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_room_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp05"
+                    android:layout_weight="1"
+                    android:text="@string/my_room_number"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp19" />
+
+                <TextView
+                    android:id="@+id/tv_room_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dp25"
+                    android:text="@string/my_room_number_et"
+                    android:textColor="@color/login_select_no"
+                    android:textSize="@dimen/sp19" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp15"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp05"
+                    android:layout_weight="1"
+                    android:text="@string/my_name_room"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp19" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dp25"
+                    android:text="@string/my_room_name"
+                    android:textColor="@color/login_select_no"
+                    android:textSize="@dimen/sp19" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp15"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp05"
+                    android:layout_weight="1"
+                    android:text="@string/my_phone_room"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp19" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dp25"
+                    android:textColor="@color/login_select_no"
+                    android:textSize="@dimen/sp19" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp05"
+                    android:layout_weight="1"
+                    android:text="@string/my_name_room"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp19" />
+
+                <TextView
+                    android:id="@+id/tv_room_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dp25"
+                    android:text="@string/my_room_name"
+                    android:textColor="@color/login_select_no"
+                    android:textSize="@dimen/sp19" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp05"
+                    android:layout_weight="1"
+                    android:text="@string/my_phone_room"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp19" />
+
+                <TextView
+                    android:id="@+id/tv_room_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dp25"
+                    android:text="@string/my_room_phone"
+                    android:textColor="@color/login_select_no"
+                    android:textSize="@dimen/sp19" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp05"
+                    android:layout_weight="1"
+                    android:text="@string/my_idcard_number"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp19" />
+
+                <EditText
+                    android:gravity="right"
+                    android:id="@+id/tv_room_idcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dp25"
+                    android:hint="@string/my_room_idcard"
+                    android:background="@null"
+                    android:textColor="@color/login_select_no"
+                    android:textSize="@dimen/sp19" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/li_room_rener"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp05"
+                        android:layout_weight="1"
+                        android:text="@string/my_onwername_room"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp19" />
+
+                    <EditText
+                        android:gravity="right"
+                        android:id="@+id/tv_room_renername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/dp25"
+                        android:hint="@string/my_room_onwername"
+                        android:background="@null"
+                        android:textColor="@color/login_select_no"
+                        android:textSize="@dimen/sp19" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp05"
+                        android:layout_weight="1"
+                        android:text="@string/my_onwerphone_room"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp19" />
+
+                    <EditText
+                        android:id="@+id/tv_room_renerphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/dp25"
+                        android:hint="@string/my_room_onwerphone"
+                        android:background="@null"
+                        android:textColor="@color/login_select_no"
+                        android:textSize="@dimen/sp19" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_submit"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="@dimen/dp70"
+                android:layout_marginRight="@dimen/dp70"
+                android:layout_marginTop="@dimen/dp50"
+                android:background="@drawable/button_login_select_no"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/login_select_no"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

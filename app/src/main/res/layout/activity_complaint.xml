@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_black"
+    android:orientation="vertical"
+    tools:context="com.rain.zhihui_community.ui.activity.control.ComplaintActivity">
+
+    <include layout="@layout/title_item_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/view_black"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_houing_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp05"
+                    android:layout_weight="1"
+                    android:text="当前小区:"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp19" />
+
+                <TextView
+                    android:id="@+id/tv_my_housing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:text="@string/housing_select"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp19" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_unit_num_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="楼号/单元号:"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp19" />
+
+                    <TextView
+                        android:id="@+id/tv_unit_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/dp15"
+                        android:text="@string/housing_unit_num"
+                        android:textColor="@color/login_select_no"
+                        android:textSize="@dimen/sp19" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/right" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp0.5"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:background="@color/view" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text="具体位置:"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp19" />
+
+                    <EditText
+                        android:id="@+id/et_sub_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/dp15"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:gravity="right"
+                        android:hint="请输入具体位置"
+                        android:maxLength="16"
+                        android:maxLines="1"
+                        android:textColor="@color/login_select_no"
+                        android:textSize="@dimen/sp19" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp05"
+                        android:text="隐患详情:"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp19" />
+
+                    <TextView
+                        android:id="@+id/tv_details_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp05"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/textview_complaint_no"
+                        android:padding="8dp"
+                        android:text="可燃物附近有火源、热源或电源"
+                        android:textColor="@color/login_select_no"
+                        android:textSize="@dimen/sp16" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_details_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/dp05"
+                            android:layout_marginLeft="@dimen/dp05"
+                            android:layout_marginTop="@dimen/dp08"
+                            android:background="@drawable/textview_complaint_no"
+                            android:padding="8dp"
+                            android:text="消防器材损坏或缺失"
+                            android:textColor="@color/login_select_no"
+                            android:textSize="@dimen/sp16" />
+
+                        <TextView
+                            android:id="@+id/tv_details_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/dp05"
+                            android:layout_marginLeft="@dimen/dp15"
+                            android:layout_marginTop="@dimen/dp08"
+                            android:background="@drawable/textview_complaint_no"
+                            android:padding="@dimen/dp08"
+                            android:text="防火门未关闭"
+                            android:textColor="@color/login_select_no"
+                            android:textSize="@dimen/sp16" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_details_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/dp05"
+                            android:layout_marginLeft="@dimen/dp05"
+                            android:layout_marginTop="@dimen/dp08"
+                            android:background="@drawable/textview_complaint_no"
+                            android:padding="@dimen/dp08"
+                            android:text="线路老化"
+                            android:textColor="@color/login_select_no"
+                            android:textSize="@dimen/sp16" />
+
+                        <TextView
+                            android:id="@+id/tv_details_five"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/dp05"
+                            android:layout_marginLeft="@dimen/dp15"
+                            android:layout_marginTop="@dimen/dp08"
+                            android:background="@drawable/textview_complaint_no"
+                            android:padding="@dimen/dp08"
+                            android:text="消防设备被堵"
+                            android:textColor="@color/login_select_no"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_details_six"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/dp05"
+                            android:layout_marginLeft="@dimen/dp15"
+                            android:layout_marginTop="@dimen/dp08"
+                            android:background="@drawable/textview_complaint_no"
+                            android:padding="@dimen/dp08"
+                            android:text="其他"
+                            android:textColor="@color/login_select_no"
+                            android:textSize="@dimen/sp16" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp0.5"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:background="@color/view" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_house_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp20"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="用一句话描述隐患情况..."
+                        android:textColorHint="@color/login_select_no"
+                        android:textSize="@dimen/sp18" />
+
+                    <com.rain.zhihui_community.ui.view.MyGridView
+                        android:id="@+id/gv_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp15"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:horizontalSpacing="@dimen/dp_20"
+                        android:listSelector="#00000000"
+                        android:numColumns="3"
+                        android:scrollbars="none">
+
+                    </com.rain.zhihui_community.ui.view.MyGridView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginLeft="@dimen/dp70"
+                android:layout_marginRight="@dimen/dp70"
+                android:layout_marginTop="@dimen/dp50"
+                android:background="@drawable/button_login_select_no"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/login_select_no"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

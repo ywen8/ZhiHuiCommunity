@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/view_black"
+              android:orientation="vertical"
+              tools:context="com.rain.zhihui_community.ui.activity.appointment.SubscribePersonActivity">
+
+    <include layout="@layout/title_item_layout"/>
+
+    <LinearLayout
+        android:id="@+id/ll_houing_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/my_housing_select"
+            android:textColor="@color/text_color"
+            android:textSize="19sp"/>
+
+        <TextView
+            android:id="@+id/tv_my_housing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:text="@string/housing_select"
+            android:textColor="@color/login_select_no"
+            android:textSize="19sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/right"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sub_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/select_time"
+            android:textColor="@color/text_color"
+            android:textSize="19sp"/>
+
+        <TextView
+            android:id="@+id/tv_sub_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/login_select_no"
+            android:textSize="19sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/right"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="手机号码"
+            android:textColor="@color/text_color"
+            android:textSize="19sp"/>
+
+        <EditText
+            android:id="@+id/et_sub_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:hint="请输入访问人手机号码"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:numeric="integer"
+            android:textColor="@color/login_select_no"
+            android:textColorHint="@color/login_select_no"
+            android:textSize="19sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_sub"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_login_select_no"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="预约"
+        android:textColor="@color/login_select_no"
+        android:textSize="16sp"/>
+</LinearLayout>

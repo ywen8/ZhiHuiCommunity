@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_switchdatetime" default="compile.module.switchdatetime">
+  <dirname property="module.switchdatetime.basedir" file="${ant.file.module_switchdatetime}"/>
+  
+  <property name="module.jdk.home.switchdatetime" value="${jdk.home.android_api_25_platform}"/>
+  <property name="module.jdk.bin.switchdatetime" value="${jdk.bin.android_api_25_platform}"/>
+  <property name="module.jdk.classpath.switchdatetime" value="jdk.classpath.android_api_25_platform"/>
+  
+  <property name="compiler.args.switchdatetime" value="-encoding UTF-8 -source 1.7 -target 1.7 ${compiler.args}"/>
+  
+  <property name="switchdatetime.output.dir" value="${module.switchdatetime.basedir}/build/intermediates/classes/debug"/>
+  <property name="switchdatetime.testoutput.dir" value="${module.switchdatetime.basedir}/build/intermediates/classes/test/debug"/>
+  
+  <path id="switchdatetime.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="switchdatetime.module.production.classpath">
+    <path refid="${module.jdk.classpath.switchdatetime}"/>
+    <path refid="library.gradle:_com.android.support:appcompat-v7-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-fragment-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-v4-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-core-ui-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-media-compat-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-annotations:25.4.0@jar.classpath"/>
+    <path refid="library.gradle:_com.android.support:animated-vector-drawable-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-compat-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:recyclerview-v7-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-vector-drawable-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-v4-24.1.0.classpath"/>
+    <path refid="library.gradle:_com.prolificinteractive:material-calendarview-1.4.3.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-core-utils-25.4.0.classpath"/>
+  </path>
+  
+  <path id="switchdatetime.runtime.production.module.classpath">
+    <pathelement location="${switchdatetime.output.dir}"/>
+    <path refid="library.gradle:_com.android.support:appcompat-v7-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-fragment-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-v4-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-core-ui-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-media-compat-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-annotations:25.4.0@jar.classpath"/>
+    <path refid="library.gradle:_com.android.support:animated-vector-drawable-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-compat-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:recyclerview-v7-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-vector-drawable-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-v4-24.1.0.classpath"/>
+    <path refid="library.gradle:_com.prolificinteractive:material-calendarview-1.4.3.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-core-utils-25.4.0.classpath"/>
+  </path>
+  
+  <path id="switchdatetime.module.classpath">
+    <path refid="${module.jdk.classpath.switchdatetime}"/>
+    <pathelement location="${switchdatetime.output.dir}"/>
+    <path refid="library.gradle:_com.android.support:appcompat-v7-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-fragment-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-v4-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-core-ui-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-media-compat-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-annotations:25.4.0@jar.classpath"/>
+    <path refid="library.gradle:_com.android.support:animated-vector-drawable-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-compat-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:recyclerview-v7-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-vector-drawable-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-v4-24.1.0.classpath"/>
+    <path refid="library.gradle:_com.prolificinteractive:material-calendarview-1.4.3.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-core-utils-25.4.0.classpath"/>
+  </path>
+  
+  <path id="switchdatetime.runtime.module.classpath">
+    <pathelement location="${switchdatetime.testoutput.dir}"/>
+    <pathelement location="${switchdatetime.output.dir}"/>
+    <path refid="library.gradle:_com.android.support:appcompat-v7-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-fragment-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-v4-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-core-ui-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-media-compat-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-annotations:25.4.0@jar.classpath"/>
+    <path refid="library.gradle:_com.android.support:animated-vector-drawable-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-compat-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:recyclerview-v7-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-vector-drawable-25.4.0.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-v4-24.1.0.classpath"/>
+    <path refid="library.gradle:_com.prolificinteractive:material-calendarview-1.4.3.classpath"/>
+    <path refid="library.gradle:_com.android.support:support-core-utils-25.4.0.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.switchdatetime">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.switchdatetime">
+    <patternset refid="excluded.from.module.switchdatetime"/>
+  </patternset>
+  
+  <path id="switchdatetime.module.sourcepath">
+    <dirset dir="${module.switchdatetime.basedir}">
+      <include name="build/generated/source/r/debug"/>
+      <include name="build/generated/source/aidl/debug"/>
+      <include name="build/generated/source/buildConfig/debug"/>
+      <include name="build/generated/source/rs/debug"/>
+      <include name="build/generated/res/rs/debug"/>
+      <include name="src/main/res"/>
+      <include name="src/main/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.switchdatetime" depends="compile.module.switchdatetime.production,compile.module.switchdatetime.tests" description="Compile module switchdatetime"/>
+  
+  <target name="compile.module.switchdatetime.production" depends="register.custom.compilers" description="Compile module switchdatetime; production classes">
+    <mkdir dir="${switchdatetime.output.dir}"/>
+    <javac2 destdir="${switchdatetime.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.switchdatetime}/javac">
+      <compilerarg line="${compiler.args.switchdatetime}"/>
+      <bootclasspath refid="switchdatetime.module.bootclasspath"/>
+      <classpath refid="switchdatetime.module.production.classpath"/>
+      <src refid="switchdatetime.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.switchdatetime"/>
+    </javac2>
+    
+    <copy todir="${switchdatetime.output.dir}">
+      <fileset dir="${module.switchdatetime.basedir}/build/generated/source/r/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.switchdatetime.basedir}/build/generated/source/aidl/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.switchdatetime.basedir}/build/generated/source/buildConfig/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.switchdatetime.basedir}/build/generated/source/rs/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.switchdatetime.basedir}/build/generated/res/rs/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.switchdatetime.basedir}/src/main/res">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.switchdatetime.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.switchdatetime.tests" depends="register.custom.compilers,compile.module.switchdatetime.production" description="compile module switchdatetime; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.switchdatetime" description="cleanup module">
+    <delete dir="${switchdatetime.output.dir}"/>
+    <delete dir="${switchdatetime.testoutput.dir}"/>
+  </target>
+</project>
